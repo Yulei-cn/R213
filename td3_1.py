@@ -3,12 +3,17 @@ print("Calcul du capital acquis et de ses intérêts payés lorsque les intérê
 #m=int(input("Entrez le montant du paiement mensuel : "))
 #r=float(input("Saisissez le taux annuel en % : "))
 #t=int(input("Entrez le nombre d'années : "))
-s = 300
+c0 = 300
 m = 45
-r = 0.023
-t = 8
-n = 1
-FM = 0.00
-for j in range(t):
-    FM = m * (((1 + r/n)**(n*t) - 1) / (r/n))
-print("€", round(FM, 2))
+t = 2.3
+n = 8
+
+def c(n):
+    if n == 0:
+        return c0
+    else:
+        return ((c(n - 1) + 12 * m) * (1 + t / 100))
+
+print("La capital est", round(c(n), 2), "€")
+print("Les intérêts gagnés à", t, "% sont de", round(c(n) - n * m * 12 - c0, 2), "€")
+print("Sans intérêts, le total serait de", round(n * m * 12 + c0, 2), "€")
