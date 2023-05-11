@@ -1,0 +1,24 @@
+Exercice 2 : Calcul du diamètre d’un volet roulant autour de son axe lorsque le volet est ouvert
+
+Pour répondre à cette question, il est intéressant de commencer par celles-ci :
+1. Combien de lames « entières » sont nécessaires pour le tablier en position fermée ?
+2400/36[mm]=66.7 >67 lames
+
+2. En déduire la longueur à enrouler.
+67*40[mm]=2680 >2.68m
+
+3. Donner l’équation de la suite arithmétique du diamètre « dn » pour le tour « n ».
+
+
+4. En déduire la circonférence parcourue « cn » pour le tour « n ».
+
+
+5. Calculer la longueur enroulée « Ln » au tour « n ». Les tours étant entiers, il sera nécessaire de
+faire une interpolation linéaire pour définir correctement le diamètre selon la longueur enroulée.
+
+
+6. En réalité, afin que les attaches du tablier ne soient pas en extension ou tendues lorsqu’il est
+fermé, on considère que le tablier reste enroulé sur 2 tours. Pour faire simple, ces 2 tours
+tiennent compte de la distance entre l’axe et les glissières.
+Calculer la nouvelle longueur « Ln » à enrouler.
+Conclure
